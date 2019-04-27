@@ -84,7 +84,7 @@
     <Compile Include="Domain\Trinta.cs" />
     <Compile Include="Domain\Um.cs" />
     <Compile Include="Domain\Vinte.cs" />
-    <Compile Include="Zero.cs" />
+    <Compile Include="Domain\Zero.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
