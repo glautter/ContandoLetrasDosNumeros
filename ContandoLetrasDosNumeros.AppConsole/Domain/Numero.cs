@@ -8,10 +8,8 @@ namespace ContandoLetrasDosNumeros.AppConsole
 {
     public abstract class Numero
     {
-        private readonly int _numero;
         public Numero[] _numerosEscrita;
         public Numero() { }
-        public Numero(int numero) => this._numero = numero;
         public void SetNumerosEscrita(Numero[] numeros) => _numerosEscrita = numeros;
         public virtual int CalcularCaracteres(int numero) 
             => Equal(numero) ? GetQuantidadeDeCaracteres : 0;
