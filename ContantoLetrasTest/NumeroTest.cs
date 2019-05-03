@@ -22,13 +22,11 @@ namespace ContantoLetrasTest
                 index++;
             }
         }
-
         private static IOrderedEnumerable<Numero> ObterInstancias()
         {
             return new ContadorLetras(1000).GetInstanciasDosNumeros()
                             .OrderBy(x => x.GetValor);
         }
-
         [TestMethod]
         public void DeveObterValorDoNumeroUm()
         {
@@ -123,6 +121,12 @@ namespace ContantoLetrasTest
         {
             Numero um = new Um();
             Assert.AreEqual(um.GetQuantidadeDeCaracteres, 2);
+        }
+        [TestMethod]
+        public void DeveIncrementarSoma()
+        {
+            var contador = new ContadorLetras(100);            
+            Assert.AreEqual(contador.Incrementar(10), contador._soma);
         }
     }
 }

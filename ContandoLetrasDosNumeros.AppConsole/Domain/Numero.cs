@@ -26,7 +26,6 @@ namespace ContandoLetrasDosNumeros.AppConsole
 
             return null;
         }
-
         public Numero GetNumero(int numero)
         {
             var numeroEncontrado = GetNumeroNaoIrregular(numero);

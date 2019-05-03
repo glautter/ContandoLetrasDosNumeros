@@ -37,13 +37,18 @@ namespace ContandoLetrasDosNumeros.AppConsole
                 var numero = Numero.GetNumero(index);
 
                 if (numero.Equal(index))
-                    _soma += numero.CalcularCaracteres(index);
+                    Incrementar(numero.CalcularCaracteres(index));
                 else
                 {
                     numero.SetNumerosEscrita(_numeroEscrita);
-                    _soma += numero.GetSomaNumero(index);
+                    Incrementar(numero.GetSomaNumero(index));
                 }
             }
+        }
+
+        public int Incrementar(int numero)
+        {
+            return _soma += numero;
         }
     }
 }
