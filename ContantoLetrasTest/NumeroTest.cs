@@ -287,7 +287,7 @@ namespace ContantoLetrasTest
         public void DeveIncrementarSoma()
         {
             var contador = new ContadorLetras(100);
-            Assert.AreEqual(contador.Incrementar(10), contador._soma);
+            Assert.AreEqual(contador.Incrementar(10), contador.GetResultadoSoma);
         }
     }
 }

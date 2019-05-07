@@ -7,10 +7,9 @@ namespace ContandoLetrasDosNumeros.AppConsole
 {
     public class ContadorLetras
     {
-        public Numero[] _numeroEscrita;
-        public int _soma;
-        public Numero Numero = new Zero();
-        internal int GetResultadoSoma() => _soma;
+        private Numero[] _numeroEscrita;
+        private Numero _numero = new Zero();
+        public int GetResultadoSoma { get; private set; }
 
         public Numero[] GetInstanciasDosNumeros()
         {
@@ -30,11 +29,11 @@ namespace ContandoLetrasDosNumeros.AppConsole
         {
             _numeroEscrita = GetInstanciasDosNumeros();
 
-            Numero.SetNumerosEscrita(_numeroEscrita);
+            _numero.SetNumerosEscrita(_numeroEscrita);
 
             for (int index = 1; index <= valor; index++)
             {
-                var numero = Numero.GetNumero(index);
+                var numero = _numero.GetNumero(index);
 
                 if (numero.Equal(index))
                     Incrementar(numero.CalcularCaracteres(index));
@@ -48,7 +47,7 @@ namespace ContandoLetrasDosNumeros.AppConsole
 
         public int Incrementar(int numero)
         {
-            return _soma += numero;
+            return GetResultadoSoma += numero;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ContandoLetrasDosNumeros.AppConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Total de letras: {new ContadorLetras(1000).GetResultadoSoma()}");
+            Console.WriteLine($"Total de letras: {new ContadorLetras(1000).GetResultadoSoma}");
             Console.ReadKey();
         }
     }
