@@ -284,12 +284,6 @@ namespace ContantoLetrasTest
             Assert.AreEqual(um.GetQuantidadeDeCaracteres, 2);
         }
         [TestMethod]
-        public void DeveObterAQuantidade()
-        {
-            Numero um = new Um();
-            Assert.AreEqual(um.GetQuantidadeDeCaracteres, 2);
-        }
-        [TestMethod]
         public void DeveIncrementarSoma()
         {
             var contador = new ContadorLetras(100);
