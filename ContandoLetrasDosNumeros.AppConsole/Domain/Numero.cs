@@ -51,10 +51,11 @@ namespace ContandoLetrasDosNumeros.AppConsole
                 {
                     var numeroEncontrado = GetNumero(int.Parse(unidade));
                     numberSum += numeroEncontrado.CalcularCaracteres(numeroEncontrado.GetValor);
+                    numberSum++;
                 }
             }
 
-            return numberSum;
+            return numberSum--;
         }
 
         private string[] SepararUnidades(int numero)
