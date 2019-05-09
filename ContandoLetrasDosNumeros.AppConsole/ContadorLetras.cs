@@ -11,6 +11,7 @@ namespace ContandoLetrasDosNumeros.AppConsole
         private Numero _numero = new Zero();
         public int GetResultadoSoma { get; private set; }
 
+        //Obter as classes correspondentes aos números
         public Numero[] GetInstanciasDosNumeros()
         {
             Type parentType = typeof(Numero);
@@ -25,6 +26,7 @@ namespace ContandoLetrasDosNumeros.AppConsole
 
            return tipos.OrderBy(x => x.GetValor).ToArray();
         }
+        //Construtor inicia o processo
         public ContadorLetras(int valor)
         {
             _numeroEscrita = GetInstanciasDosNumeros();
